@@ -1,0 +1,15 @@
+{
+  "name": "docedelicuri-scrapper",
+  "version": "1.0.0",
+  "description": "A web scrapper for Doce de Licuri project.",
+  "main": "./src/index.js",
+  "repository": "https://github.com/rafaelpaixao/docedelicuri-scrapper",
+  "author": "Rafael Paixão",
+  "license": "MIT",
+  "scripts": {
+    "go": "node ./src/index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^6.1.0"
+  }
+}
