@@ -7,7 +7,8 @@ module.exports = {
   SELECTORS: {
     CITIES: '#formConsulta #municipios',
     MONTHS: '#formConsulta #mes',
-    YEARS: '#formConsulta #ano'
+    YEARS: '#formConsulta #ano',
+    SALARIES_CONTENT: '#texto'
   },
   FORM: {
     ENTITY_FIELD_NAME: 'entidades'
