@@ -7,6 +7,7 @@
   "author": "Rafael Paixão",
   "license": "MIT",
   "scripts": {
+    "extract-options": "node ./src/extract-options.js",
     "test": "mocha --timeout 15000 --exit"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "dotenv": "^6.1.0",
     "firebase-admin": "^6.1.0",
     "mocha": "^5.2.0",
+    "node-pretty-log": "^1.1.0",
+    "promise-queue": "^2.2.5",
     "request-promise": "^4.2.2"
   }
 }
