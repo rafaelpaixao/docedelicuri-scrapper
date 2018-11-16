@@ -70,6 +70,6 @@ describe('Storage', function() {
     after(function() {
       const path = Storage.addRootToPath('test')
       fs.unlinkSync(path + 'mytest')
-      fs.rmdir(path)
+      fs.rmdirSync(path)
     })
 })
