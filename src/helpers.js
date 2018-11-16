@@ -9,6 +9,17 @@ module.exports = {
     })
     return newObj
   },
+  makePaymentKey({ city, entity, year, month }) {
+    return (
+      this.removeWhiteSpace(city.value) +
+      '_' +
+      entity.value +
+      '_' +
+      year.value +
+      '_' +
+      month.value
+    )
+  },
   removeWhiteSpace(value) {
     return value.replace(/ /g, '')
   }
