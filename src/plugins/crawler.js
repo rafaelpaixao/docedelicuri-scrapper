@@ -1,8 +1,11 @@
 const cheerio = require('cheerio')
 
-class FormCrawler {
+class Crawler {
   constructor({ raw }) {
     this.$ = cheerio.load(raw)
+  }
+  extractContent({ selector }) {
+    return this.$(selector).html()
   }
   extractSelectOptions({ selector }) {
     let $ = this.$
@@ -23,4 +26,4 @@ class FormCrawler {
   }
 }
 
-module.exports = FormCrawler
+module.exports = Crawler
