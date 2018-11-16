@@ -31,12 +31,9 @@ describe('Firebase', function() {
         })().catch(error => done(error))
       })
     }),
-    describe('#clear()', function() {
-      it('Set key "test" with value null', function(done) {
-        ;(async () => {
-          await Firebase.set({ path: 'test', data: null })
-          done()
-        })().catch(error => done(error))
-      })
+    after(function() {
+      ;async () => {
+        await Firebase.set({ path: 'test', data: null })
+      }
     })
 })
