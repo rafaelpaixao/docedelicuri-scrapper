@@ -1,14 +1,13 @@
-const axios = require('axios')
+const request = require('request-promise')
+const Crawler = require('../../plugins/crawler')
 const CONSTANTS = require('../constants')
-const FormCrawler = require('./crawler')
 
 module.exports = {
   get() {
     return new Promise((resolve, reject) => {
-      axios
-        .get(CONSTANTS.URLS.SALARIES)
+      request(CONSTANTS.URLS.SALARIES)
         .then(response => {
-          const crawler = new FormCrawler({ raw: response.data })
+          const crawler = new Crawler({ raw: response })
           resolve({
             cities: crawler.extractSelectOptions({
               selector: CONSTANTS.SELECTORS.CITIES

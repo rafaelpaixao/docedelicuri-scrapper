@@ -1,4 +1,4 @@
-const axios = require('axios')
+const request = require('request-promise')
 const CONSTANTS = require('../constants')
 
 const convertResponse = function({ entitiesFromResponse }) {
@@ -16,10 +16,9 @@ const convertResponse = function({ entitiesFromResponse }) {
 module.exports = {
   get({ cityKey }) {
     return new Promise((resolve, reject) => {
-      axios
-        .get(CONSTANTS.URLS.ENTITIES + cityKey)
+      request({ uri: CONSTANTS.URLS.ENTITIES + cityKey, json: true })
         .then(response => {
-          resolve(convertResponse({ entitiesFromResponse: response.data }))
+          resolve(convertResponse({ entitiesFromResponse: response }))
         })
         .catch(error => reject(error))
     })
