@@ -24,6 +24,9 @@ class Crawler {
       })
     return items
   }
+  howMany({ selector }) {
+    return this.$(selector).length
+  }
 }
 
 module.exports = Crawler

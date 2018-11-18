@@ -1,0 +1,6 @@
+module.exports = {
+  TABLE_9: 'TABLE_9',
+  TABLE_6: 'TABLE_6',
+  DATA_NOT_INFORMED: 'DATA_NOT_INFORMED',
+  UNKNOWN: 'UNKNOWN'
+}
