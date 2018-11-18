@@ -75,5 +75,13 @@ describe('Helpers', function() {
         assert.equal(name, 'test')
         done()
       })
+    }),
+    describe('#convertKeyToPath()', function() {
+      it(`Remove extension from a file name`, function(done) {
+        const key = 'test_1_23'
+        const path = Helpers.convertKeyToPath(filename)
+        assert.equal(path, 'test/1/23')
+        done()
+      })
     })
 })
