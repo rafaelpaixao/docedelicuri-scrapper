@@ -67,5 +67,13 @@ describe('Helpers', function() {
         assert.equal(newS, 'test123')
         done()
       })
+    }),
+    describe('#removeExtensionFromFilename()', function() {
+      it(`Remove extension from a file name`, function(done) {
+        const filename = 'test.html'
+        const name = Helpers.removeExtensionFromFilename(filename)
+        assert.equal(name, 'test')
+        done()
+      })
     })
 })

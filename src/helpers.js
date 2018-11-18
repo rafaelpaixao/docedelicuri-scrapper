@@ -27,6 +27,9 @@ module.exports = {
       month.value
     )
   },
+  removeExtensionFromFilename(filename) {
+    return filename.substr(0, filename.lastIndexOf('.'))
+  },
   removeWhiteSpace(value) {
     return value.replace(/ /g, '')
   }
