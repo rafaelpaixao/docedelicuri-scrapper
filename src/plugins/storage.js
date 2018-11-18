@@ -16,12 +16,17 @@ module.exports = {
     }
     return root + path
   },
-  mkdir({ path }) {
+  exists({ path, filename = null }) {
     path = this.addRootToPath(path)
-    if (!fs.existsSync(path)) {
-      return fs.mkdirSync(path)
+    if (filename != null) {
+      path += filename
     }
     return fs.existsSync(path)
+  },
+  mkdir({ path }) {
+    const exists = this.exists({ path })
+    path = this.addRootToPath(path)
+    return exists ? exists : fs.mkdirSync(path)
   },
   listFromDir({ path }) {
     path = this.addRootToPath(path)
