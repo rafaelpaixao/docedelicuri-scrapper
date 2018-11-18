@@ -6,7 +6,7 @@ const CONSTANTS = require('../tcmba/constants')
 const MODELS = require('./models')
 const Helpers = require('../helpers')
 
-const paymentPath = 'raw_payments_content'
+const paymentPath = process.env.PATH_PAYMENTS_RAW
 
 const _identifyPaymentModel = function({ filename, path }) {
   const raw = LocalStorage.read({ filename, path })

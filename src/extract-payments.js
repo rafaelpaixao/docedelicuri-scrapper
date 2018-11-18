@@ -10,7 +10,7 @@ const Queue = require('./plugins/queue')
 const Payments = require('./tcmba/payments/api')
 const Helpers = require('./helpers')
 
-const paymentPath = 'raw_payments_content'
+const paymentPath = process.env.PATH_PAYMENTS_RAW
 
 LocalStorage.mkdir({ path: paymentPath })
 

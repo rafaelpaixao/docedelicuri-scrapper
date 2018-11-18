@@ -24,6 +24,21 @@ class Crawler {
       })
     return items
   }
+  extractTableRows({ selector }) {
+    selector += ' tbody tr'
+    let rows = []
+    const $ = this.$
+    $(selector).each(function() {
+      let cells = []
+      $(this)
+        .find('td')
+        .each(function() {
+          cells.push($(this).text())
+        })
+      rows.push(cells)
+    })
+    return rows
+  }
   howMany({ selector }) {
     return this.$(selector).length
   }

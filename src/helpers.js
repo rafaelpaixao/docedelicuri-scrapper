@@ -1,4 +1,7 @@
 module.exports = {
+  convertKeyToPath(key) {
+    return key.replace(/_/g, '/')
+  },
   convertToRef({ obj, key = 'value' }) {
     return { [this.removeWhiteSpace(obj[key])]: obj }
   },
