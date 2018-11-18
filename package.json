@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "extract-options": "node ./src/extract-options.js",
+    "extract-payments": "node ./src/extract-payments.js",
     "test": "mocha --timeout 15000 --exit"
   },
   "dependencies": {
