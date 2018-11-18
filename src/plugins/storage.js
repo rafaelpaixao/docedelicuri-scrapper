@@ -36,6 +36,10 @@ module.exports = {
     path = this.addRootToPath(path)
     return fs.readFileSync(path + filename, 'utf8')
   },
+  stats({ filename, path = '' }) {
+    path = this.addRootToPath(path)
+    return fs.statSync(path + filename)
+  },
   write({ filename, data, path }) {
     path = this.addRootToPath(path)
     fs.writeFileSync(path + filename, data)

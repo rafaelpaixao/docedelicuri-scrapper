@@ -70,6 +70,20 @@ describe('Storage', function() {
         }
       })
     }),
+    describe('#stats()', function() {
+      it('Test if file "mytest" is a file (using stats)', function(done) {
+        try {
+          const stats = Storage.stats({
+            path: testPath,
+            filename: testFile
+          })
+          assert.equal(stats.isFile(), true)
+          done()
+        } catch (error) {
+          done(error)
+        }
+      })
+    }),
     describe('#read()', function() {
       it('Read file "mytest" in folder "test"', function(done) {
         try {
