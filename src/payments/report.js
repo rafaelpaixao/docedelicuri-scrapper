@@ -35,7 +35,7 @@ const expandedComposition = function() {
 }
 
 const getElementKey = function({ text, ref, atr, expanded = false }) {
-  const elementKey = _makeSlug(text)
+  const elementKey = text === '' ? _makeSlug('Não informado') : _makeSlug(text)
   if (ref[atr][elementKey] === undefined) {
     ref[atr][elementKey] = {
       text,
