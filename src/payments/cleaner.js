@@ -18,7 +18,7 @@ const _convertMoneyStringToFloat = function(moneyString) {
 
 const _convertHoursStringToInt = function(hoursString) {
   hoursString = hoursString.replace('h', '').replace(/ /g, '')
-  return parseInt(hoursString)
+  return hoursString.length > 0 ? parseInt(hoursString) : ''
 }
 
 const _fixCase = function(phrase) {
