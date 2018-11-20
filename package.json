@@ -9,7 +9,8 @@
   "scripts": {
     "extract-options": "node ./src/extract-options.js",
     "extract-payments": "node ./src/extract-payments.js",
-    "process-payments": "node ./src/process-payments.js",
+    "validate-payments": "node ./src/validate-payments.js",
+    "clean-payments": "node ./src/clean-payments.js",
     "make-reports": "node ./src/make-reports.js",
     "test": "mocha --timeout 15000 --exit"
   },
