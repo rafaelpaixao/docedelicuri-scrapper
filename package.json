@@ -11,7 +11,7 @@
     "extract-payments": "node ./src/extract-payments.js",
     "validate-payments": "node ./src/validate-payments.js",
     "clean-payments": "node ./src/clean-payments.js",
-    "make-reports": "node ./src/make-reports.js",
+    "make-reports": "node --max_old_space_size=4096 ./src/make-reports.js",
     "test": "mocha --timeout 15000 --exit"
   },
   "dependencies": {

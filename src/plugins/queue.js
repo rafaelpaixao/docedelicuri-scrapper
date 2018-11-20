@@ -1,6 +1,6 @@
 const PromiseQueue = require('promise-queue')
 
-var maxConcurrent = 4
+var maxConcurrent = 2
 var maxQueue = Infinity
 var queue = new PromiseQueue(maxConcurrent, maxQueue)
 
