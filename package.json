@@ -1,6 +1,6 @@
 {
   "name": "docedelicuri-scrapper",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A web scrapper for Doce de Licuri project.",
   "main": "./src/index.js",
   "repository": "https://github.com/rafaelpaixao/docedelicuri-scrapper",
