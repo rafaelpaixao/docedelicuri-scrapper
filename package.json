@@ -1,0 +1,28 @@
+{
+  "name": "docedelicuri-scrapper",
+  "version": "0.0.1",
+  "description": "A web scrapper for Doce de Licuri project.",
+  "main": "./src/index.js",
+  "repository": "https://github.com/rafaelpaixao/docedelicuri-scrapper",
+  "author": "Rafael Paixão",
+  "license": "MIT",
+  "scripts": {
+    "extract-options": "node ./src/extract-options.js",
+    "extract-payments": "node ./src/extract-payments.js",
+    "validate-payments": "node ./src/validate-payments.js",
+    "clean-payments": "node ./src/clean-payments.js",
+    "make-reports": "node --max_old_space_size=4096 ./src/make-reports.js",
+    "report-meta": "node ./src/report-payments-meta.js",
+    "test": "mocha --timeout 15000 --exit"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^6.1.0",
+    "firebase-admin": "^6.1.0",
+    "mocha": "^5.2.0",
+    "node-pretty-log": "^1.1.0",
+    "promise-queue": "^2.2.5",
+    "request-promise": "^4.2.2",
+    "slug": "^0.9.2"
+  }
+}
